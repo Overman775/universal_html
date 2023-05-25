@@ -46,9 +46,7 @@ The source code adopted from 'dart:html' had the following license:
 
 part of universal_html.internal;
 
-class AnchorElement extends HtmlElement
-    with _HtmlHyperlinkElementUtils, _UrlBase, _HrefAttributeElement
-    implements HtmlHyperlinkElementUtils {
+class AnchorElement extends HtmlElement with _HtmlHyperlinkElementUtils, _UrlBase, _HrefAttributeElement implements HtmlHyperlinkElementUtils {
   factory AnchorElement({String? href}) {
     final element = AnchorElement._(window.document);
     if (href != null) {
@@ -90,17 +88,13 @@ class AnchorElement extends HtmlElement
   }
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      AnchorElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => AnchorElement._(ownerDocument);
 }
 
-class AreaElement extends HtmlElement
-    with _HtmlHyperlinkElementUtils, _UrlBase, _HrefAttributeElement
-    implements HtmlHyperlinkElementUtils {
+class AreaElement extends HtmlElement with _HtmlHyperlinkElementUtils, _UrlBase, _HrefAttributeElement implements HtmlHyperlinkElementUtils {
   factory AreaElement() => AreaElement._(window.document);
 
-  AreaElement._(Document ownerDocument, {String nodeName = 'AREA'})
-      : super._(ownerDocument, nodeName);
+  AreaElement._(Document ownerDocument, {String nodeName = 'AREA'}) : super._(ownerDocument, nodeName);
 
   String? get download => _getAttribute('download');
 
@@ -153,88 +147,75 @@ class BodyElement extends HtmlElement implements WindowEventHandlers {
   /// handlers that are not necessarily instances of [BodyElement].
   ///
   /// See [EventStreamProvider] for usage information.
-  static const EventStreamProvider<Event> blurEvent =
-      EventStreamProvider<Event>('blur');
+  static const EventStreamProvider<Event> blurEvent = EventStreamProvider<Event>('blur');
 
   /// Static factory designed to expose `error` events to event
   /// handlers that are not necessarily instances of [BodyElement].
   ///
   /// See [EventStreamProvider] for usage information.
-  static const EventStreamProvider<Event> errorEvent =
-      EventStreamProvider<Event>('error');
+  static const EventStreamProvider<Event> errorEvent = EventStreamProvider<Event>('error');
 
   /// Static factory designed to expose `focus` events to event
   /// handlers that are not necessarily instances of [BodyElement].
   ///
   /// See [EventStreamProvider] for usage information.
-  static const EventStreamProvider<Event> focusEvent =
-      EventStreamProvider<Event>('focus');
+  static const EventStreamProvider<Event> focusEvent = EventStreamProvider<Event>('focus');
 
   /// Static factory designed to expose `hashchange` events to event
   /// handlers that are not necessarily instances of [BodyElement].
   ///
   /// See [EventStreamProvider] for usage information.
-  static const EventStreamProvider<Event> hashChangeEvent =
-      EventStreamProvider<Event>('hashchange');
+  static const EventStreamProvider<Event> hashChangeEvent = EventStreamProvider<Event>('hashchange');
 
   /// Static factory designed to expose `load` events to event
   /// handlers that are not necessarily instances of [BodyElement].
   ///
   /// See [EventStreamProvider] for usage information.
-  static const EventStreamProvider<Event> loadEvent =
-      EventStreamProvider<Event>('load');
+  static const EventStreamProvider<Event> loadEvent = EventStreamProvider<Event>('load');
 
   /// Static factory designed to expose `message` events to event
   /// handlers that are not necessarily instances of [BodyElement].
   ///
   /// See [EventStreamProvider] for usage information.
-  static const EventStreamProvider<MessageEvent> messageEvent =
-      EventStreamProvider<MessageEvent>('message');
+  static const EventStreamProvider<MessageEvent> messageEvent = EventStreamProvider<MessageEvent>('message');
 
   /// Static factory designed to expose `offline` events to event
   /// handlers that are not necessarily instances of [BodyElement].
   ///
   /// See [EventStreamProvider] for usage information.
-  static const EventStreamProvider<Event> offlineEvent =
-      EventStreamProvider<Event>('offline');
+  static const EventStreamProvider<Event> offlineEvent = EventStreamProvider<Event>('offline');
 
   /// Static factory designed to expose `online` events to event
   /// handlers that are not necessarily instances of [BodyElement].
   ///
   /// See [EventStreamProvider] for usage information.
-  static const EventStreamProvider<Event> onlineEvent =
-      EventStreamProvider<Event>('online');
+  static const EventStreamProvider<Event> onlineEvent = EventStreamProvider<Event>('online');
 
   /// Static factory designed to expose `popstate` events to event
   /// handlers that are not necessarily instances of [BodyElement].
   ///
   /// See [EventStreamProvider] for usage information.
-  static const EventStreamProvider<PopStateEvent> popStateEvent =
-      EventStreamProvider<PopStateEvent>('popstate');
+  static const EventStreamProvider<PopStateEvent> popStateEvent = EventStreamProvider<PopStateEvent>('popstate');
 
   /// Static factory designed to expose `resize` events to event
   /// handlers that are not necessarily instances of [BodyElement].
   ///
   /// See [EventStreamProvider] for usage information.
-  static const EventStreamProvider<Event> resizeEvent =
-      EventStreamProvider<Event>('resize');
+  static const EventStreamProvider<Event> resizeEvent = EventStreamProvider<Event>('resize');
 
-  static const EventStreamProvider<Event> scrollEvent =
-      EventStreamProvider<Event>('scroll');
+  static const EventStreamProvider<Event> scrollEvent = EventStreamProvider<Event>('scroll');
 
   /// Static factory designed to expose `storage` events to event
   /// handlers that are not necessarily instances of [BodyElement].
   ///
   /// See [EventStreamProvider] for usage information.
-  static const EventStreamProvider<StorageEvent> storageEvent =
-      EventStreamProvider<StorageEvent>('storage');
+  static const EventStreamProvider<StorageEvent> storageEvent = EventStreamProvider<StorageEvent>('storage');
 
   /// Static factory designed to expose `unload` events to event
   /// handlers that are not necessarily instances of [BodyElement].
   ///
   /// See [EventStreamProvider] for usage information.
-  static const EventStreamProvider<Event> unloadEvent =
-      EventStreamProvider<Event>('unload');
+  static const EventStreamProvider<Event> unloadEvent = EventStreamProvider<Event>('unload');
 
   factory BodyElement() => BodyElement._(window.document);
 
@@ -309,8 +290,7 @@ class BRElement extends HtmlElement {
   Element _newInstance(Document ownerDocument) => BRElement._(ownerDocument);
 }
 
-class ButtonElement extends HtmlElement
-    with _DisabledElement, _FormFieldElement {
+class ButtonElement extends HtmlElement with _DisabledElement, _FormFieldElement {
   bool? formNoValidate;
 
   String? formTarget;
@@ -356,8 +336,7 @@ class ButtonElement extends HtmlElement
   }
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      ButtonElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => ButtonElement._(ownerDocument);
 }
 
 class CanvasElement extends HtmlElement implements CanvasImageSource {
@@ -365,21 +344,18 @@ class CanvasElement extends HtmlElement implements CanvasImageSource {
   /// handlers that are not necessarily instances of [CanvasElement].
   ///
   /// See [EventStreamProvider] for usage information.
-  static const EventStreamProvider<gl.ContextEvent> webGlContextLostEvent =
-      EventStreamProvider<gl.ContextEvent>('webglcontextlost');
+  static const EventStreamProvider<gl.ContextEvent> webGlContextLostEvent = EventStreamProvider<gl.ContextEvent>('webglcontextlost');
 
   /// Static factory designed to expose `webglcontextrestored` events to event
   /// handlers that are not necessarily instances of [CanvasElement].
   ///
   /// See [EventStreamProvider] for usage information.
-  static const EventStreamProvider<gl.ContextEvent> webGlContextRestoredEvent =
-      EventStreamProvider<gl.ContextEvent>('webglcontextrestored');
+  static const EventStreamProvider<gl.ContextEvent> webGlContextRestoredEvent = EventStreamProvider<gl.ContextEvent>('webglcontextrestored');
 
   /// An API for drawing on this canvas.
   late final CanvasRenderingContext2D context2D = throw UnimplementedError();
 
-  CanvasElement({int? width, int? height})
-      : super._(window.document, 'CANVAS') {
+  CanvasElement({int? width, int? height}) : super._(window.document, 'CANVAS') {
     if (width != null) {
       _setAttributeInt('width', width);
     }
@@ -398,12 +374,10 @@ class CanvasElement extends HtmlElement implements CanvasImageSource {
   }
 
   /// Stream of `webglcontextlost` events handled by this [CanvasElement].
-  ElementStream<gl.ContextEvent> get onWebGlContextLost =>
-      webGlContextLostEvent.forElement(this);
+  ElementStream<gl.ContextEvent> get onWebGlContextLost => webGlContextLostEvent.forElement(this);
 
   /// Stream of `webglcontextrestored` events handled by this [CanvasElement].
-  ElementStream<gl.ContextEvent> get onWebGlContextRestored =>
-      webGlContextRestoredEvent.forElement(this);
+  ElementStream<gl.ContextEvent> get onWebGlContextRestored => webGlContextRestoredEvent.forElement(this);
 
   /// The width of this canvas element in CSS pixels.
   int? get width => _getAttributeInt('width');
@@ -502,8 +476,7 @@ class CanvasElement extends HtmlElement implements CanvasImageSource {
   }
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      CanvasElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => CanvasElement._(ownerDocument);
 }
 
 class ContentElement extends HtmlElement {
@@ -520,8 +493,7 @@ class ContentElement extends HtmlElement {
   }
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      ContentElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => ContentElement._(ownerDocument);
 }
 
 class DataElement extends HtmlElement {
@@ -536,12 +508,10 @@ class DataListElement extends HtmlElement {
 
   factory DataListElement() => DataListElement._(window.document);
 
-  DataListElement._(Document ownerDocument)
-      : super._(ownerDocument, 'DATALIST');
+  DataListElement._(Document ownerDocument) : super._(ownerDocument, 'DATALIST');
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      DataListElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => DataListElement._(ownerDocument);
 }
 
 class DetailsElement extends HtmlElement {
@@ -558,8 +528,7 @@ class DetailsElement extends HtmlElement {
   }
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      DetailsElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => DetailsElement._(ownerDocument);
 }
 
 class DialogElement extends HtmlElement {
@@ -582,8 +551,7 @@ class DialogElement extends HtmlElement {
   }
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      DialogElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => DialogElement._(ownerDocument);
 }
 
 class DivElement extends HtmlElement {
@@ -614,8 +582,7 @@ class DomTokenList {
 
   void add(String tokens) {
     final list = _getList();
-    final splitTokens =
-        tokens.split(' ').map((e) => e.trim()).where((e) => e.isNotEmpty);
+    final splitTokens = tokens.split(' ').map((e) => e.trim()).where((e) => e.isNotEmpty);
     list.addAll(splitTokens);
     _setList(list);
   }
@@ -630,8 +597,7 @@ class DomTokenList {
 
   void remove(String tokens) {
     final list = _getList();
-    final splitTokens =
-        tokens.split(' ').map((e) => e.trim()).where((e) => e.isNotEmpty);
+    final splitTokens = tokens.split(' ').map((e) => e.trim()).where((e) => e.isNotEmpty);
     for (var token in splitTokens) {
       list.remove(token);
     }
@@ -667,11 +633,7 @@ class DomTokenList {
     if (value == null || value.isEmpty) {
       return <String>[];
     }
-    return value
-        .split(' ')
-        .map((e) => e.trim())
-        .where((e) => e.trim().isNotEmpty)
-        .toList();
+    return value.split(' ').map((e) => e.trim()).where((e) => e.trim().isNotEmpty).toList();
   }
 
   void _setList(List<String> list) {
@@ -693,8 +655,7 @@ class EmbedElement extends HtmlElement {
 class FieldSetElement extends HtmlElement with _FormFieldElement {
   factory FieldSetElement() => FieldSetElement._(window.document);
 
-  FieldSetElement._(Document ownerDocument)
-      : super._(ownerDocument, 'FIELDSET');
+  FieldSetElement._(Document ownerDocument) : super._(ownerDocument, 'FIELDSET');
 
   bool get disabled => _getAttributeBool('disabled');
 
@@ -705,8 +666,7 @@ class FieldSetElement extends HtmlElement with _FormFieldElement {
   String? get type => null;
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      FieldSetElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => FieldSetElement._(ownerDocument);
 }
 
 class FormElement extends HtmlElement {
@@ -777,9 +737,7 @@ class FormElement extends HtmlElement {
 
   /// Returns all items of this form.
   Iterable<Element> get _items {
-    return _treeAsIterable(this)
-        .whereType<InputElement>()
-        .where((element) => identical(element.form, this));
+    return _treeAsIterable(this).whereType<InputElement>().where((element) => identical(element.form, this));
   }
 
   bool checkValidity() {
@@ -906,8 +864,7 @@ class FormElement extends HtmlElement {
 
   /// Sends an element in 'multipart/form-data' format.
   /// Called by [_sendMultiPart].
-  void _sendMultiPartElement(
-      MultipartFormWriter writer, Element element) async {
+  void _sendMultiPartElement(MultipartFormWriter writer, Element element) async {
     if (element is InputElement) {
       final name = element.name;
       if (name == null || name.isEmpty) {
@@ -970,8 +927,7 @@ class FormElement extends HtmlElement {
         );
 
       case 'post':
-        final httpClient =
-            window.internalWindowController.onChooseHttpClient(uri);
+        final httpClient = window.internalWindowController.onChooseHttpClient(uri);
         final httpRequest = await httpClient.openUrl(method, uri);
         httpRequest.headers.contentType = io.ContentType(
           'application',
@@ -1077,12 +1033,10 @@ class HeadingElement extends HtmlElement {
 
   factory HeadingElement.h6() => HeadingElement._(window.document, 'H6');
 
-  HeadingElement._(Document ownerDocument, String name)
-      : super._(ownerDocument, name);
+  HeadingElement._(Document ownerDocument, String name) : super._(ownerDocument, name);
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      HeadingElement._(ownerDocument, _lowerCaseTagName);
+  Element _newInstance(Document ownerDocument) => HeadingElement._(ownerDocument, _lowerCaseTagName);
 }
 
 class HRElement extends HtmlElement {
@@ -1101,8 +1055,7 @@ abstract class HtmlElement extends Element implements NoncedElement {
 
   HtmlElement.created() : super.created();
 
-  HtmlElement._(Document ownerDocument, String tagName)
-      : super._(ownerDocument, tagName);
+  HtmlElement._(Document ownerDocument, String tagName) : super._(ownerDocument, tagName);
 
   @override
   String? get nonce => _getAttribute('nonce');
@@ -1119,8 +1072,7 @@ class HtmlHtmlElement extends HtmlElement {
   HtmlHtmlElement._(Document ownerDocument) : super._(ownerDocument, 'HTML');
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      HtmlHtmlElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => HtmlHtmlElement._(ownerDocument);
 }
 
 abstract class HtmlHyperlinkElementUtils implements _UrlBase {
@@ -1215,8 +1167,7 @@ class IFrameElement extends HtmlElement {
   }
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      IFrameElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => IFrameElement._(ownerDocument);
 }
 
 class ImageElement extends HtmlElement implements CanvasImageSource {
@@ -1686,9 +1637,7 @@ class InputElement extends HtmlElement
 
   @override
   bool get willValidate {
-    return !(_ancestors.any((e) => e is DataListElement) ||
-        _typesNotValidated.contains(type.toString()) ||
-        disabled);
+    return !(_ancestors.any((e) => e is DataListElement) || _typesNotValidated.contains(type.toString()) || disabled);
   }
 
   /// Gets regular expression.
@@ -1849,8 +1798,7 @@ class LegendElement extends HtmlElement with _FormFieldElement {
   LegendElement._(Document ownerDocument) : super._(ownerDocument, 'LEGEND');
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      LegendElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => LegendElement._(ownerDocument);
 }
 
 class LIElement extends HtmlElement {
@@ -1868,8 +1816,7 @@ class LIElement extends HtmlElement {
   Element _newInstance(Document ownerDocument) => LIElement._(ownerDocument);
 }
 
-class LinkElement extends HtmlElement
-    with _HrefAttributeElement, _DisabledElement {
+class LinkElement extends HtmlElement with _HrefAttributeElement, _DisabledElement {
   factory LinkElement() => LinkElement._(window.document);
 
   LinkElement._(Document ownerDocument) : super._(ownerDocument, 'LINK');
@@ -1966,8 +1913,7 @@ abstract class MediaElement extends HtmlElement {
 
   bool disableRemotePlayback = false;
 
-  MediaElement._(Document ownerDocument, String tag)
-      : super._(ownerDocument, tag);
+  MediaElement._(Document ownerDocument, String tag) : super._(ownerDocument, tag);
 
   bool get autoplay => _getAttributeBool('autoplay');
 
@@ -2200,8 +2146,7 @@ class ObjectElement extends HtmlElement with _FormFieldElement {
   }
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      ObjectElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => ObjectElement._(ownerDocument);
 }
 
 class OListElement extends HtmlElement {
@@ -2216,8 +2161,7 @@ class OListElement extends HtmlElement {
 class OptGroupElement extends HtmlElement {
   factory OptGroupElement() => OptGroupElement._(window.document);
 
-  OptGroupElement._(Document ownerDocument)
-      : super._(ownerDocument, 'OPTGROUP');
+  OptGroupElement._(Document ownerDocument) : super._(ownerDocument, 'OPTGROUP');
 
   bool get disabled => _getAttributeBool('disabled');
 
@@ -2226,12 +2170,10 @@ class OptGroupElement extends HtmlElement {
   }
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      OptGroupElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => OptGroupElement._(ownerDocument);
 }
 
-class OptionElement extends HtmlElement
-    with _DisabledElement, _FormFieldElement {
+class OptionElement extends HtmlElement with _DisabledElement, _FormFieldElement {
   String? label;
   bool? _selected;
 
@@ -2256,8 +2198,7 @@ class OptionElement extends HtmlElement
   /// This can only be called by subclasses from their created constructor.
   OptionElement.created() : super.created();
 
-  OptionElement._(Document ownerDocument, {String nodeName = 'OPTION'})
-      : super._(ownerDocument, nodeName);
+  OptionElement._(Document ownerDocument, {String nodeName = 'OPTION'}) : super._(ownerDocument, nodeName);
 
   bool get defaultSelected => _getAttributeBool('selected');
 
@@ -2317,8 +2258,7 @@ class OptionElement extends HtmlElement
   }
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      OptionElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => OptionElement._(ownerDocument);
 }
 
 class OutputElement extends HtmlElement with _FormFieldElement {
@@ -2351,19 +2291,16 @@ class OutputElement extends HtmlElement with _FormFieldElement {
   bool get willValidate => true;
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      OutputElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => OutputElement._(ownerDocument);
 }
 
 class ParagraphElement extends HtmlElement {
   factory ParagraphElement() => ParagraphElement._(window.document);
 
-  ParagraphElement._(Document ownerDocument, {String nodeName = 'P'})
-      : super._(ownerDocument, nodeName);
+  ParagraphElement._(Document ownerDocument, {String nodeName = 'P'}) : super._(ownerDocument, nodeName);
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      ParagraphElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => ParagraphElement._(ownerDocument);
 }
 
 class ParamElement extends HtmlElement {
@@ -2390,19 +2327,16 @@ class ParamElement extends HtmlElement {
 class PictureElement extends HtmlElement {
   factory PictureElement.created() => PictureElement._(window.document);
 
-  PictureElement._(Document ownerDocument, {String nodeName = 'PICTURE'})
-      : super._(ownerDocument, nodeName);
+  PictureElement._(Document ownerDocument, {String nodeName = 'PICTURE'}) : super._(ownerDocument, nodeName);
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      PictureElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => PictureElement._(ownerDocument);
 }
 
 class PreElement extends HtmlElement {
   factory PreElement() => PreElement._(window.document);
 
-  PreElement._(Document ownerDocument, {String nodeName = 'PRE'})
-      : super._(ownerDocument, nodeName);
+  PreElement._(Document ownerDocument, {String nodeName = 'PRE'}) : super._(ownerDocument, nodeName);
 
   @override
   Element _newInstance(Document ownerDocument) => PreElement._(ownerDocument);
@@ -2413,8 +2347,7 @@ class ProgressElement extends HtmlElement {
 
   factory ProgressElement() => ProgressElement._(window.document);
 
-  ProgressElement._(Document ownerDocument, {String nodeName = 'PROGRESS'})
-      : super._(ownerDocument, nodeName);
+  ProgressElement._(Document ownerDocument, {String nodeName = 'PROGRESS'}) : super._(ownerDocument, nodeName);
 
   num? get max => _getAttributeNum('max', defaultValue: null);
 
@@ -2431,8 +2364,7 @@ class ProgressElement extends HtmlElement {
   }
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      ProgressElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => ProgressElement._(ownerDocument);
 }
 
 class QuoteElement extends HtmlElement {
@@ -2445,8 +2377,7 @@ class QuoteElement extends HtmlElement {
 class ScriptElement extends HtmlElement {
   factory ScriptElement() => ScriptElement._(window.document);
 
-  ScriptElement._(Document ownerDocument, {String nodeName = 'SCRIPT'})
-      : super._(ownerDocument, nodeName);
+  ScriptElement._(Document ownerDocument, {String nodeName = 'SCRIPT'}) : super._(ownerDocument, nodeName);
 
   bool get async => _getAttributeBool('async');
 
@@ -2491,12 +2422,10 @@ class ScriptElement extends HtmlElement {
   }
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      ScriptElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => ScriptElement._(ownerDocument);
 }
 
-class SelectElement extends HtmlElement
-    with _DisabledElement, _FormFieldElement, _LabelsElement {
+class SelectElement extends HtmlElement with _DisabledElement, _FormFieldElement, _LabelsElement {
   factory SelectElement() => SelectElement._(window.document);
 
   /// Constructor instantiated by the DOM when a custom element has been created.
@@ -2650,8 +2579,7 @@ class SelectElement extends HtmlElement
   void setCustomValidity(String error) {}
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      SelectElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => SelectElement._(ownerDocument);
 }
 
 class ShadowElement extends HtmlElement {
@@ -2660,8 +2588,7 @@ class ShadowElement extends HtmlElement {
   ShadowElement._(Document ownerDocument) : super._(ownerDocument, 'SHADOW');
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      ShadowElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => ShadowElement._(ownerDocument);
 }
 
 class SlotElement extends HtmlElement {
@@ -2713,8 +2640,7 @@ class SourceElement extends HtmlElement {
   }
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      SourceElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => SourceElement._(ownerDocument);
 }
 
 class SpanElement extends HtmlElement {
@@ -2749,7 +2675,7 @@ class StyleElement extends HtmlElement {
       return null;
     }
     final text = this.text;
-    final parsed = css.parse(text);
+    final parsed = css.parse(text!);
     final styleSheet = CssStyleSheet.constructor();
     for (var node in parsed.topLevels) {
       if (node is css.RuleSet) {
@@ -2774,12 +2700,10 @@ class StyleElement extends HtmlElement {
 class TableCaptionElement extends HtmlElement {
   factory TableCaptionElement() => TableCaptionElement._(window.document);
 
-  TableCaptionElement._(Document ownerDocument)
-      : super._(ownerDocument, 'CAPTION');
+  TableCaptionElement._(Document ownerDocument) : super._(ownerDocument, 'CAPTION');
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      TableCaptionElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => TableCaptionElement._(ownerDocument);
 }
 
 class TableCellElement extends HtmlElement {
@@ -2805,8 +2729,7 @@ class TableCellElement extends HtmlElement {
   }
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      TableCellElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => TableCellElement._(ownerDocument);
 }
 
 class TableColElement extends HtmlElement {
@@ -2815,8 +2738,7 @@ class TableColElement extends HtmlElement {
   TableColElement._(Document ownerDocument) : super._(ownerDocument, 'COL');
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      TableColElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => TableColElement._(ownerDocument);
 }
 
 class TableElement extends HtmlElement {
@@ -2829,9 +2751,7 @@ class TableElement extends HtmlElement {
 
   TableElement._(Document ownerDocument) : super._(ownerDocument, 'TABLE');
 
-  TableCaptionElement? get caption => children
-      .whereType<TableCaptionElement?>()
-      .firstWhere((e) => true, orElse: () => null);
+  TableCaptionElement? get caption => children.whereType<TableCaptionElement?>().firstWhere((e) => true, orElse: () => null);
 
   List<TableRowElement> get rows {
     final tableRows = <TableRowElement>[];
@@ -2851,19 +2771,12 @@ class TableElement extends HtmlElement {
   }
 
   List<TableSectionElement> get tBodies {
-    return children
-        .whereType<TableSectionElement>()
-        .where((e) => e.tagName.toLowerCase() == 'body')
-        .toList();
+    return children.whereType<TableSectionElement>().where((e) => e.tagName.toLowerCase() == 'body').toList();
   }
 
-  TableSectionElement get tFoot => children
-      .whereType<TableSectionElement>()
-      .firstWhere((e) => e.tagName.toLowerCase() == 'tfoot');
+  TableSectionElement get tFoot => children.whereType<TableSectionElement>().firstWhere((e) => e.tagName.toLowerCase() == 'tfoot');
 
-  TableSectionElement get tHead => children
-      .whereType<TableSectionElement>()
-      .firstWhere((e) => e.tagName.toLowerCase() == 'thead');
+  TableSectionElement get tHead => children.whereType<TableSectionElement>().firstWhere((e) => e.tagName.toLowerCase() == 'thead');
 
   TableRowElement addRow() => createTBody().addRow();
 
@@ -2895,8 +2808,7 @@ class TableElement extends HtmlElement {
     );
   }
 
-  void deleteCaption() =>
-      children.removeWhere((e) => e._lowerCaseTagName == 'caption');
+  void deleteCaption() => children.removeWhere((e) => e._lowerCaseTagName == 'caption');
 
   void deleteRow(int index) {
     createTBody().deleteRow(index);
@@ -2918,9 +2830,7 @@ class TableElement extends HtmlElement {
     required String lowerCaseTagName,
     required T Function() constructor,
   }) {
-    final existing = children.whereType<T?>().firstWhere(
-        (e) => e != null && e._lowerCaseTagName == lowerCaseTagName,
-        orElse: () => null);
+    final existing = children.whereType<T?>().firstWhere((e) => e != null && e._lowerCaseTagName == lowerCaseTagName, orElse: () => null);
     if (existing != null) {
       return existing;
     }
@@ -2988,16 +2898,13 @@ class TableRowElement extends HtmlElement {
   }
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      TableRowElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => TableRowElement._(ownerDocument);
 }
 
 class TableSectionElement extends HtmlElement {
-  TableSectionElement._(Document ownerDocument, String tag)
-      : super._(ownerDocument, tag);
+  TableSectionElement._(Document ownerDocument, String tag) : super._(ownerDocument, tag);
 
-  List<TableRowElement> get rows =>
-      childNodes.whereType<TableRowElement>().toList();
+  List<TableRowElement> get rows => childNodes.whereType<TableRowElement>().toList();
 
   TableRowElement addRow() {
     final row = TableRowElement();
@@ -3034,8 +2941,7 @@ class TableSectionElement extends HtmlElement {
   }
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      TableSectionElement._(ownerDocument, _lowerCaseTagName);
+  Element _newInstance(Document ownerDocument) => TableSectionElement._(ownerDocument, _lowerCaseTagName);
 }
 
 class TemplateElement extends HtmlElement {
@@ -3044,8 +2950,7 @@ class TemplateElement extends HtmlElement {
 
   factory TemplateElement() => TemplateElement._(window.document);
 
-  TemplateElement._(Document ownerDocument)
-      : super._(ownerDocument, 'TEMPLATE');
+  TemplateElement._(Document ownerDocument) : super._(ownerDocument, 'TEMPLATE');
 
   DocumentFragment get content {
     throw UnimplementedError();
@@ -3072,12 +2977,10 @@ class TemplateElement extends HtmlElement {
   }
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      TemplateElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => TemplateElement._(ownerDocument);
 }
 
-class TextAreaElement extends HtmlElement
-    with _DisabledElement, _FormFieldElement, _LabelsElement {
+class TextAreaElement extends HtmlElement with _DisabledElement, _FormFieldElement, _LabelsElement {
   String dirName = '';
   String selectionDirection = '';
   int selectionEnd = -1;
@@ -3090,8 +2993,7 @@ class TextAreaElement extends HtmlElement
   /// This can only be called by subclasses from their created constructor.
   TextAreaElement.created() : super.created();
 
-  TextAreaElement._(Document ownerDocument)
-      : super._(ownerDocument, 'TEXTAREA');
+  TextAreaElement._(Document ownerDocument) : super._(ownerDocument, 'TEXTAREA');
 
   String? get autocapitalize => _getAttribute('autocapitalize');
 
@@ -3217,8 +3119,7 @@ class TextAreaElement extends HtmlElement
   }
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      TextAreaElement._(ownerDocument);
+  Element _newInstance(Document ownerDocument) => TextAreaElement._(ownerDocument);
 }
 
 class TimeElement extends HtmlElement {
@@ -3285,9 +3186,7 @@ class UnknownElement extends HtmlElement {
   final String? _namespaceUri;
 
   /// Internal constructor. __Not part of dart:html__.
-  UnknownElement.internal(
-      Document ownerDocument, this._namespaceUri, String tag)
-      : super._(ownerDocument, tag);
+  UnknownElement.internal(Document ownerDocument, this._namespaceUri, String tag) : super._(ownerDocument, tag);
 
   @override
   String? get namespaceUri {
@@ -3298,8 +3197,7 @@ class UnknownElement extends HtmlElement {
   }
 
   @override
-  Element _newInstance(Document ownerDocument) =>
-      UnknownElement.internal(ownerDocument, namespaceUri, _lowerCaseTagName);
+  Element _newInstance(Document ownerDocument) => UnknownElement.internal(ownerDocument, namespaceUri, _lowerCaseTagName);
 }
 
 class ValidityState {
@@ -3408,8 +3306,7 @@ mixin _HrefAttributeElement implements HtmlElement {
   }
 }
 
-mixin _HtmlHyperlinkElementUtils
-    implements HtmlHyperlinkElementUtils, _UrlBase {
+mixin _HtmlHyperlinkElementUtils implements HtmlHyperlinkElementUtils, _UrlBase {
   @override
   set host(String? value) {
     throw UnimplementedError();
